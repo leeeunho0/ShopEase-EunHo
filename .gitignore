@@ -1,0 +1,8 @@
+#.gitignore
+# - git에게 알려주는 파일이다.
+# - 이 파일들은 폴더는 github에 올리지마!
+# - 아래 작성된 파일 및 폴더는 github에 올리지마!
+
+CSS/
+HTML/
+JS/

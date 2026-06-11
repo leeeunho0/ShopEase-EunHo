@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="쉽고 빠르게 쇼핑하는 ShopEase 쇼핑몰 상세페이지입니다.">
+  <title>Details.html</title>
+  <link rel="stylesheet" href="details.css">
+</head>
+<body>
+  <!-- 시멘틱 태그 -->
+<div class="wrap">
+  <header></header>
+
+  <main>
+    <section class="max-container">
+      <!-- 상품의 상세 정보를 보여주는 영역!(구역!) -->
+      <h2>Details</h2>
+      <hr>
+      <div id="상세페이지내용" class="details-section">
+        <img width="500px" src="../IMAGES/데님재킷.png" alt="데님재킷">
+        <div class="details-content">
+          <h3>데님재킷</h3>
+          <p>청 데님 자켓 입니다.</p>
+          <input type="number" value="1">
+          <select>
+            <option value="">S</option>
+            <option value="">M</option>
+            <option value="">L</option>
+            <option value="">XL</option>
+          </select>
+          
+          <button>장바구니 담기</button>
+          <button>바로구매</button>
+        </div>
+      </div>
+    </section>
+
+      <!-- tab 영역! -->
+      <section class="max-container test">
+          <div class="tab-menus">
+            <button class="tab-btn active"
+                    onclick="탭변경('상품상세',this)">상품상세</button>
+            <button class="tab-btn"
+                    onclick="탭변경('상품평',this)">상품평(<span id="product-count">0</span>)</button>
+            <button class="tab-btn"
+                    onclick="탭변경('상품문의',this)">상품문의</button>
+            <button class="tab-btn"
+                    onclick="탭변경('배송/교환/반품',this)">배송/교환/반품 안내</button>
+          </div>
+          <div id="탭내용보이기"></div>
+      </section>
+   
+  </main>
+
+  
+
+  <footer class="max-container">
+    ⓒ 2017 SEOHEE COMPANY.
+  </footer>
+
+</div>
+
+<script src="details.js"></script>
+
+</body>
+</html>

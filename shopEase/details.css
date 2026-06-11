@@ -1,0 +1,77 @@
+/* details.css */
+
+/* 내가 많이 쓰는 기본 태그들이 기본 패딩, 마진 디자인들 들어있기 때문에 초기화! */
+*{
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, ul{
+  padding: 0;
+  margin: 0;
+
+  text-align: center;
+}
+
+
+/* 내용들이 가운데로 정렬될 수 있도록 설정 */
+.max-container{
+  width: 1200px;
+
+  margin: 20px auto;
+
+  /* border: 2px solid red; */
+}
+/* 상세페이지 이미지와 내용들을 가로 정렬하기 */
+.details-section{
+  display: flex;
+}
+.details-section img{
+  width: 50%;
+}
+
+.details-content{
+  width: 50%;
+  padding: 30px;
+  text-align: left;
+}
+.details-content select{
+  width: 50%;
+
+  padding: 11px 20px;
+}
+.details-content input{
+  width: 30%;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+.details-content button{
+  padding: 5px 20px;
+}
+
+/* 아래쪽 공간확보를 위한 테스트 디자인 */
+.test{
+  height: 2000px;
+  /* border: 2px solid red; */
+}
+
+.tab-menus{
+  display: flex;
+  /* width: 100%; */
+  /* background-color: #ccc; */
+}
+
+/* 버튼들이 1200px에 맞게 넓게 4등분 했으면 좋겠다 
+   레이아웃 똑같이 나눠주는 그리드
+*/
+.tab-menus button{
+  /* width: 295px; */
+  flex: 1;
+  padding: 15px 30px;
+  cursor: pointer; /*손가락*/
+}
+
+/* 현재 탭이 눌려진 디자인 */
+.active{
+  background-color: white;
+  border-bottom: none;
+}

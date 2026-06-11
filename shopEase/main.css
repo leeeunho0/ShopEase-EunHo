@@ -1,0 +1,110 @@
+/* main.css */
+
+*{
+   /* 실무에서는 필수적으로 설정 한다.
+    내가 가진 너비를 기준으로 너비를 정한다.
+    1200px 고정 
+    패딩 1200 px안에서 모두 정리한다
+    border-box
+  ┌──────────────────────────────────────────┐
+  │  padding │        content       │padding │
+  │   20px   │  (1200 - 40 = 1160)  │  20px  │
+  └──────────────────────────────────────────┘
+  전체 너비 = 1200px  → 레이아웃 유지!
+
+
+    */
+  box-sizing: border-box;  
+}
+
+/* 웹이 기본적으로 가지고 있는 내용들 초기화! */
+body, h1, h2, h3, h4, p, ul, span{
+  padding: 0;
+  margin: 0;
+
+}
+ul{
+  /* 점 없애기 */
+  list-style: none;
+}
+
+header, main, footer{
+  text-align: center;
+}
+
+footer{
+  height: 300px;
+  /* background-color: #ccc; */
+  /* border: 1px solid green; */
+}
+/* 헤더 부분의 nav 메뉴 디자인 */
+.nav{
+  padding: 30px;
+  /* 가로방향 */
+  display: flex;
+  /* 정렬 */
+  justify-content: space-between;
+}
+.nav ul{
+  gap: 30px;
+  display: flex;
+}
+
+/* 최대 너비를 지정한다. */
+.max-container{
+  width: 1200px;
+  margin: 0 auto;
+  /* background-color: #ccc; */
+}
+/* 메인 부분 배너는 화면 전체를 사용하겠다. */
+.main-banner{
+  width: 100%;
+}
+.main-banner img{
+  width: 100%;
+}
+.main-products{
+  /* border: 1px solid red; */
+
+  /* 안쪽으로 전체 여백을 준다 */
+  padding: 20px;
+}
+.cards{
+  /* 카드들을 가로 정렬 */
+display: flex;
+justify-content: center;
+
+/* 간격 */
+gap: 20px;
+}
+.card{
+  width: 250px;
+  margin-top: 30px;
+  
+  /* background-color: lightblue; */
+}
+.card img{
+  width: 100%;
+}
+.card button{
+  width: 100%;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 10px;
+
+  padding: 10px;
+
+  font-size: 40px;
+  font-weight: bold;
+  background: none;
+  cursor: pointer;
+}
+/* 실제 태그 크기를 계산하는 방법
+기본 태그의 width + 패딩 = 총 태그의 너비를 계산한다.
+div 1200px + 왼쪽패딩 20px + 오른쪽패딩 20px = 1240px
+패딩값이 추가되서 너비가 늘어나면 문제점
+ - 반응형이 제대로 동작을 안할 수 있고, 상품들의 줄 세운 
+ 정렬들이 깨지거나 다른 이미지들이나 다른 태그 글들과 겹칠 수 있다.
+ - 레이아웃 깨짐!
+
+*/
